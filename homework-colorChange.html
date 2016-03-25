@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>homework-changeColor</title>
+	<style type="text/css">
+	#box {
+		margin: 0 auto;
+		height: 126px;
+		width: 126px;
+	}
+	.line {
+		height: 30px;
+	}
+	.littleBox {
+		width: 30px;
+		background-color: lightblue;
+	}
+	</style>
+</head>
+<body>
+<div id="box">
+	<table class="form">
+		<tr class="line">
+			<td class="littleBox" onClick="changeColor()"></td>
+			<td class="littleBox" onClick="changeColor()"></td>
+			<td class="littleBox" onClick="changeColor()"></td>
+			<td class="littleBox" onClick="changeColor()"></td>
+		</tr>
+		<tr class="line">
+			<td class="littleBox" onClick="changeColor()"></td>
+			<td class="littleBox" onClick="changeColor()"></td>
+			<td class="littleBox" onClick="changeColor()"></td>
+			<td class="littleBox" onClick="changeColor()"></td>
+		</tr>
+		<tr class="line">
+			<td class="littleBox" onClick="changeColor()"></td>
+			<td class="littleBox" onClick="changeColor()"></td>
+			<td class="littleBox" onClick="changeColor()"></td>
+			<td class="littleBox" onClick="changeColor()"></td>
+		</tr>
+		<tr class="line">
+			<td class="littleBox" onClick="changeColor()"></td>
+			<td class="littleBox" onClick="changeColor()"></td>
+			<td class="littleBox" onClick="changeColor()"></td>
+			<td class="littleBox" onClick="changeColor()"></td>
+		</tr>
+	</table>
+</div>
+
+<!--js代码-->
+<script type="text/javascript">
+    function changeColor () {
+		var a = window.event.srcElement;
+		var color = "rgb(" + Math.floor(Math.random()*256) + "," + Math.floor(Math.random()*256) + "," + Math.floor(Math.random()*256) + ")";
+		a.style.backgroundColor = color;
+		};
+</script>
+</body>
+</html>
