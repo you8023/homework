@@ -19,41 +19,46 @@
 </head>
 <body>
 <div id="box">
-	<table class="form">
+	<table id="form">
 		<tr class="line">
-			<td class="littleBox" onClick="changeColor()"></td>
-			<td class="littleBox" onClick="changeColor()"></td>
-			<td class="littleBox" onClick="changeColor()"></td>
-			<td class="littleBox" onClick="changeColor()"></td>
+			<td class="littleBox"></td>
+			<td class="littleBox"></td>
+			<td class="littleBox"></td>
+			<td class="littleBox"></td>
 		</tr>
 		<tr class="line">
-			<td class="littleBox" onClick="changeColor()"></td>
-			<td class="littleBox" onClick="changeColor()"></td>
-			<td class="littleBox" onClick="changeColor()"></td>
-			<td class="littleBox" onClick="changeColor()"></td>
+			<td class="littleBox"></td>
+			<td class="littleBox"></td>
+			<td class="littleBox"></td>
+			<td class="littleBox"></td>
 		</tr>
 		<tr class="line">
-			<td class="littleBox" onClick="changeColor()"></td>
-			<td class="littleBox" onClick="changeColor()"></td>
-			<td class="littleBox" onClick="changeColor()"></td>
-			<td class="littleBox" onClick="changeColor()"></td>
+			<td class="littleBox"></td>
+			<td class="littleBox"></td>
+			<td class="littleBox"></td>
+			<td class="littleBox"></td>
 		</tr>
 		<tr class="line">
-			<td class="littleBox" onClick="changeColor()"></td>
-			<td class="littleBox" onClick="changeColor()"></td>
-			<td class="littleBox" onClick="changeColor()"></td>
-			<td class="littleBox" onClick="changeColor()"></td>
+			<td class="littleBox"></td>
+			<td class="littleBox"></td>
+			<td class="littleBox"></td>
+			<td class="littleBox"></td>
 		</tr>
 	</table>
 </div>
 
 <!--js代码-->
 <script type="text/javascript">
-    function changeColor () {
+var form = document.getElementById('form');
+var td = document.getElementsByTagName('td');
+    form.onclick = function () {
 		var a = window.event.srcElement;
 		var color = "rgb(" + Math.floor(Math.random()*256) + "," + Math.floor(Math.random()*256) + "," + Math.floor(Math.random()*256) + ")";
-		a.style.backgroundColor = color;
+		if (a.nodeName.toLowerCase() == "td") {
+			a.style.backgroundColor = color;
 		};
+		
+	};
 </script>
 </body>
 </html>
